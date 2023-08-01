@@ -14,11 +14,29 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.modle;
+package study01.tictactoe.model;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
 public class GameTable {
+
+    private final char[][] table = {
+            {' ', ' ', ' '},
+            {' ', ' ', ' '},
+            {' ', ' ', ' '}
+    };
+
+    public boolean isEmpty(Cell cell) {
+        return table[cell.getRow()][cell.getCol()] == ' ';
+    }
+
+    public char getSign(Cell cell) {
+        return table[cell.getRow()][cell.getCol()];
+    }
+
+    public void setSign(Cell cell, char sign) {
+        table[cell.getRow()][cell.getCol()] = sign;
+    }
 }

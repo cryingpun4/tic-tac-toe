@@ -14,16 +14,28 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
-
-import study01.tictactoe.model.GameTable;
+package study01.tictactoe.model;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class ComputerMove {
-    public void make(final GameTable gameTable) {
+public class Cell {
 
+    private final int row;
+
+    private final int col;
+
+    public Cell(final int row, final int col) {
+        this.row = row;
+        this.col = col;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
     }
 }
