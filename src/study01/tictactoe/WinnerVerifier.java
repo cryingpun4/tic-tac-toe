@@ -20,11 +20,12 @@ package study01.tictactoe;
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public final class Launcher {
-    public static void main(String[] args) {
-        Game game = new Game(new DataPrinter(),
-                new ComputerMove(), new UserMove(),
-                new WinnerVerifier(), new DrawVerifier());
-        game.play();
+public class WinnerVerifier {
+    public boolean isUserWin(final GameTable gameTable) {
+        return false;
+    }
+
+    public boolean isComputerWin(final GameTable gameTable) {
+        return false;
     }
 }
