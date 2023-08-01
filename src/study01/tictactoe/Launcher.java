@@ -16,6 +16,8 @@
 
 package study01.tictactoe;
 
+import study01.tictactoe.component.*;
+
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>

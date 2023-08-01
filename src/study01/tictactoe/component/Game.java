@@ -14,8 +14,10 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.component;
 
+
+import study01.tictactoe.modle.GameTable;
 
 import java.util.Random;
 

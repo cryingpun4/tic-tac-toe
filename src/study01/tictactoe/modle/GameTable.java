@@ -14,13 +14,11 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.modle;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class UserMove {
-    public void make(final GameTable gameTable) {
-    }
+public class GameTable {
 }

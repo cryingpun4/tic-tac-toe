@@ -14,16 +14,15 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.component;
+
+import study01.tictactoe.modle.GameTable;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class DataPrinter {
-    public void printMappingTable() {
-    }
-
-    public void printGameTable(final GameTable gameTable) {
+public class UserMove {
+    public void make(final GameTable gameTable) {
     }
 }

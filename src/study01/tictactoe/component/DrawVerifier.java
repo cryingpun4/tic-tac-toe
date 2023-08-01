@@ -14,14 +14,16 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.component;
+
+import study01.tictactoe.modle.GameTable;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class ComputerMove {
-    public void make(final GameTable gameTable) {
-
+public class DrawVerifier {
+    public boolean isDraw(final GameTable gameTable) {
+        return false;
     }
 }

@@ -14,18 +14,18 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.component;
+
+import study01.tictactoe.modle.GameTable;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class WinnerVerifier {
-    public boolean isUserWin(final GameTable gameTable) {
-        return false;
+public class DataPrinter {
+    public void printMappingTable() {
     }
 
-    public boolean isComputerWin(final GameTable gameTable) {
-        return false;
+    public void printGameTable(final GameTable gameTable) {
     }
 }
