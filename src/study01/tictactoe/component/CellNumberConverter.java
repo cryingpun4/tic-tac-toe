@@ -17,39 +17,32 @@
 package study01.tictactoe.component;
 
 import study01.tictactoe.model.Cell;
-import study01.tictactoe.model.GameTable;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class DataPrinter {
+public class CellNumberConverter {
 
-    private final CellNumberConverter cellNumberConverter;
+    private final char[][] mapping = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
 
-    public DataPrinter(final CellNumberConverter cellNumberConverter) {
-        this.cellNumberConverter = cellNumberConverter;
-    }
-
-    public void printMappingTable() {
+    public Cell toCell(final char number) {
         for (int i = 0; i < 3; i++) {
-            System.out.println("-------------");
             for (int j = 0; j < 3; j++) {
-                System.out.print("| " + cellNumberConverter.toNumber(new Cell(i, j)) + " ");
+                if (mapping[i][j] == number) {
+                    return new Cell(i, j);
+                }
             }
-            System.out.println("|");
         }
-        System.out.println("-------------");
+        return null;
     }
 
-    public void printGameTable(final GameTable gameTable) {
-        for (int i = 0; i < 3; i++) {
-            System.out.println("-------------");
-            for (int j = 0; j < 3; j++) {
-                System.out.print("| " + gameTable.getSign(new Cell(i, j)) + " ");
-            }
-            System.out.println("|");
-        }
-        System.out.println("-------------");
+    public char toNumber(final Cell cell) {
+        return mapping[cell.getRow()][cell.getCol()];
     }
+
 }
