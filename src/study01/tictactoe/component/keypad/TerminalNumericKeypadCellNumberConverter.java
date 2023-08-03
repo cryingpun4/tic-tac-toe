@@ -14,21 +14,26 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
+package study01.tictactoe.component.keypad;
 
-import study01.tictactoe.component.*;
-import study01.tictactoe.component.keypad.TerminalNumericKeypadCellNumberConverter;
+import study01.tictactoe.component.CellNumberConverter;
+import study01.tictactoe.model.Cell;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public final class Launcher {
-    public static void main(String[] args) {
-        final CellNumberConverter cellNumberConverter = new TerminalNumericKeypadCellNumberConverter();
-        Game game = new Game(new DataPrinter(cellNumberConverter),
-                new ComputerMove(), new UserMove(cellNumberConverter),
-                new WinnerVerifier(), new CellVerifier());
-        game.play();
+public class TerminalNumericKeypadCellNumberConverter implements CellNumberConverter {
+
+    @Override
+    public Cell toCell(final char number) {
+        final int val = number - '0' - 1;
+        return new Cell(val / 3, val % 3);
     }
+
+    @Override
+    public char toNumber(final Cell cell) {
+        return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
+    }
+
 }
