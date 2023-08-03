@@ -14,19 +14,38 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
+package study01.tictactoe.component.keypad;
 
+import study01.tictactoe.component.CellNumberConverter;
 import study01.tictactoe.model.Cell;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface CellNumberConverter {
+public class DesktopNumericKeypadCellNumberConverter implements CellNumberConverter {
 
+    private final char[][] mapping = {
+            {'7', '8', '9'},
+            {'4', '5', '6'},
+            {'1', '2', '3'}
+    };
 
-    Cell toCell(char number);
+    @Override
+    public Cell toCell(final char number) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (mapping[i][j] == number) {
+                    return new Cell(i, j);
+                }
+            }
+        }
+        return null;
+    }
 
-    char toNumber(Cell cell);
+    @Override
+    public char toNumber(final Cell cell) {
+        return mapping[cell.getRow()][cell.getCol()];
+    }
 
 }
