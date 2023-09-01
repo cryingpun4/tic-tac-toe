@@ -31,7 +31,7 @@ public class DesktopNumericKeypadCellNumberConverter implements CellNumberConver
             {'1', '2', '3'}
     };
 
-    @Override
+
     public Cell toCell(final char number) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -43,7 +43,7 @@ public class DesktopNumericKeypadCellNumberConverter implements CellNumberConver
         return null;
     }
 
-    @Override
+
     public char toNumber(final Cell cell) {
         return mapping[cell.getRow()][cell.getCol()];
     }
