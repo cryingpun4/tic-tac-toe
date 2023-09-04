@@ -73,6 +73,4 @@ public class WinnerVerifier {
                 gameTable.getSign(new Cell(1, 1)) == gameTable.getSign(new Cell(0, 2)) &&
                 gameTable.getSign(new Cell(0, 2)) == sign;
     }
-
-
 }

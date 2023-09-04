@@ -34,7 +34,6 @@ public class UserMove {
     }
 
     public void make(final GameTable gameTable) {
-
         while (true) {
             Cell cell = getUserInput();
             if (gameTable.isEmpty(cell)) {
@@ -44,7 +43,6 @@ public class UserMove {
                 System.out.println("Can't make a move, because the cell is not free! Try again!");
             }
         }
-
     }
 
     private Cell getUserInput() {
