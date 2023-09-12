@@ -18,27 +18,29 @@ package study01.tictactoe.model;
 
 import java.util.Arrays;
 
+import static study01.tictactoe.model.Sign.EMPTY;
+
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
 public class GameTable {
 
-    private final char[][] table = {
-            {' ', ' ', ' '},
-            {' ', ' ', ' '},
-            {' ', ' ', ' '}
+    private final Sign[][] table = {
+            {EMPTY, EMPTY, EMPTY},
+            {EMPTY, EMPTY, EMPTY},
+            {EMPTY, EMPTY, EMPTY}
     };
 
     public boolean isEmpty(Cell cell) {
-        return table[cell.getRow()][cell.getCol()] == ' ';
+        return table[cell.getRow()][cell.getCol()] == EMPTY;
     }
 
-    public char getSign(Cell cell) {
+    public Sign getSign(Cell cell) {
         return table[cell.getRow()][cell.getCol()];
     }
 
-    public void setSign(Cell cell, char sign) {
+    public void setSign(Cell cell, Sign sign) {
         table[cell.getRow()][cell.getCol()] = sign;
     }
 

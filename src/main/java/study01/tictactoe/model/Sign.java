@@ -14,30 +14,25 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
-
-import study01.tictactoe.model.Cell;
-import study01.tictactoe.model.GameTable;
-
-import java.util.Random;
-
-import static study01.tictactoe.model.Sign.O;
+package study01.tictactoe.model;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class ComputerMove {
-    public void make(final GameTable gameTable) {
-        final Random random = new Random();
-        while (true) {
-            final int row = random.nextInt(3);
-            final int col = random.nextInt(3);
-            final Cell randomCell = new Cell(row, col);
-            if (gameTable.isEmpty(randomCell)) {
-                gameTable.setSign(randomCell, O);
-                return;
-            }
+public enum Sign {
+    X,
+
+    O,
+
+    EMPTY;
+
+    @Override
+    public String toString() {
+        if (this == EMPTY) {
+            return " ";
+        } else {
+            return name();
         }
     }
 }
