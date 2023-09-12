@@ -16,6 +16,7 @@
 
 package study01.tictactoe.component;
 
+import study01.tictactoe.component.keypad.Move;
 import study01.tictactoe.model.Cell;
 import study01.tictactoe.model.GameTable;
 
@@ -27,7 +28,7 @@ import static study01.tictactoe.model.Sign.X;
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class UserMove {
+public class UserMove implements Move {
 
     private final CellNumberConverter cellNumberConverter;
 
@@ -35,6 +36,7 @@ public class UserMove {
         this.cellNumberConverter = cellNumberConverter;
     }
 
+    @Override
     public void make(final GameTable gameTable) {
         while (true) {
             Cell cell = getUserInput();
