@@ -17,10 +17,11 @@
 package study01.tictactoe.component;
 
 
-import study01.tictactoe.component.keypad.Move;
 import study01.tictactoe.model.GameTable;
+import study01.tictactoe.model.Player;
 
-import java.util.Random;
+import static study01.tictactoe.model.Sign.O;
+import static study01.tictactoe.model.Sign.X;
 
 /**
  * @author CryingPun4
@@ -51,27 +52,19 @@ public class Game {
         System.out.println("Use the following mapping table to specify a cell using numbers from 1 to 9");
         dataPrinter.printMappingTable();
         final GameTable gameTable = new GameTable();
-        if (new Random().nextBoolean()) {
-            computerMove.make(gameTable);
-            dataPrinter.printGameTable(gameTable);
-        }
-        final Move[] moves = {userMove, computerMove};
+//        if (new Random().nextBoolean()) {
+//            computerMove.make(gameTable);
+//            dataPrinter.printGameTable(gameTable);
+//        }
+        final Player[] players = {new Player(X, userMove), new Player(O, computerMove)};
         while (true) {
-            for (final Move move : moves) {
-                move.make(gameTable);
+            for (final Player player : players) {
+                player.makeMove(gameTable);
                 dataPrinter.printGameTable(gameTable);
-                if (move instanceof UserMove) {
-                    if (winnerVerifier.isUserWin(gameTable)) {
-                        System.out.println("YOU WIN!");
-                        printGameOver();
-                        return;
-                    }
-                } else {
-                    if (winnerVerifier.isComputerWin(gameTable)) {
-                        System.out.println("COMPUTER WIN!");
-                        printGameOver();
-                        return;
-                    }
+                if (winnerVerifier.isWinner(gameTable, player)) {
+                    System.out.println(player + " WIN!");
+                    printGameOver();
+                    return;
                 }
 
                 if (cellVerifier.allCellsFilled(gameTable)) {

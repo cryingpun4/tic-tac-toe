@@ -18,29 +18,20 @@ package study01.tictactoe.component;
 
 import study01.tictactoe.model.Cell;
 import study01.tictactoe.model.GameTable;
+import study01.tictactoe.model.Player;
 import study01.tictactoe.model.Sign;
-
-import static study01.tictactoe.model.Sign.O;
-import static study01.tictactoe.model.Sign.X;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
 public class WinnerVerifier {
-    public boolean isUserWin(final GameTable gameTable) {
-        return isWinner(gameTable, X);
-    }
 
-    public boolean isComputerWin(final GameTable gameTable) {
-        return isWinner(gameTable, O);
-    }
-
-    private boolean isWinner(final GameTable gameTable, final Sign sign) {
-        return isWinnerByRows(gameTable, sign) ||
-                isWinnerByCols(gameTable, sign) ||
-                isWinnerByMainDiagonal(gameTable, sign) ||
-                isWinnerBySecondaryDiagonal(gameTable, sign);
+    public boolean isWinner(final GameTable gameTable, final Player player) {
+        return isWinnerByRows(gameTable, player.getSign()) ||
+                isWinnerByCols(gameTable, player.getSign()) ||
+                isWinnerByMainDiagonal(gameTable, player.getSign()) ||
+                isWinnerBySecondaryDiagonal(gameTable, player.getSign());
     }
 
     private boolean isWinnerByRows(final GameTable gameTable, final Sign sign) {

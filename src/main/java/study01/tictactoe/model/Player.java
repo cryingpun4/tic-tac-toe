@@ -14,15 +14,40 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component.keypad;
+package study01.tictactoe.model;
 
-import study01.tictactoe.model.GameTable;
-import study01.tictactoe.model.Sign;
+import study01.tictactoe.component.keypad.Move;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface Move {
-    void make(GameTable gameTable, Sign sign);
+public class Player {
+
+    private final Sign sign;
+
+    private final Move move;
+
+    public Player(final Sign sign, final Move move) {
+        this.sign = sign;
+        this.move = move;
+    }
+
+    public Sign getSign() {
+        return sign;
+    }
+
+    public Move getMove() {
+        return move;
+    }
+
+
+    public void makeMove(final GameTable gameTable) {
+        move.make(gameTable, sign);
+    }
+
+    @Override
+    public String toString() {
+        return "'" + sign + "'";
+    }
 }
