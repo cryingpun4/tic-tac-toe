@@ -20,8 +20,7 @@ package study01.tictactoe.component;
 import study01.tictactoe.model.GameTable;
 import study01.tictactoe.model.Player;
 
-import static study01.tictactoe.model.Sign.O;
-import static study01.tictactoe.model.Sign.X;
+import java.util.Random;
 
 /**
  * @author CryingPun4
@@ -30,20 +29,27 @@ import static study01.tictactoe.model.Sign.X;
 public class Game {
 
     private final DataPrinter dataPrinter;
-    private final ComputerMove computerMove;
-    private final UserMove userMove;
+
+    private final Player player1;
+
+    private final Player player2;
+
+    private final boolean canSecondPlayerMakeFirstMove;
+
+
     private final WinnerVerifier winnerVerifier;
     private final CellVerifier cellVerifier;
 
 
     public Game(final DataPrinter dataPrinter,
-                final ComputerMove computerMove,
-                final UserMove userMove,
-                final WinnerVerifier winnerVerifier,
+                final Player player1,
+                final Player player2,
+                final boolean canSecondPlayerMakeFirstMove, final WinnerVerifier winnerVerifier,
                 final CellVerifier cellVerifier) {
         this.dataPrinter = dataPrinter;
-        this.computerMove = computerMove;
-        this.userMove = userMove;
+        this.player1 = player1;
+        this.player2 = player2;
+        this.canSecondPlayerMakeFirstMove = canSecondPlayerMakeFirstMove;
         this.winnerVerifier = winnerVerifier;
         this.cellVerifier = cellVerifier;
     }
@@ -52,11 +58,11 @@ public class Game {
         System.out.println("Use the following mapping table to specify a cell using numbers from 1 to 9");
         dataPrinter.printMappingTable();
         final GameTable gameTable = new GameTable();
-//        if (new Random().nextBoolean()) {
-//            computerMove.make(gameTable);
-//            dataPrinter.printGameTable(gameTable);
-//        }
-        final Player[] players = {new Player(X, userMove), new Player(O, computerMove)};
+        if (canSecondPlayerMakeFirstMove && new Random().nextBoolean()) {
+            player2.makeMove(gameTable);
+            dataPrinter.printGameTable(gameTable);
+        }
+        final Player[] players = {player1, player2};
         while (true) {
             for (final Player player : players) {
                 player.makeMove(gameTable);
