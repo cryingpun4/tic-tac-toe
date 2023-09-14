@@ -14,22 +14,15 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe;
-
-import study01.tictactoe.component.CellNumberConverter;
-import study01.tictactoe.component.Game;
-import study01.tictactoe.component.GameFactory;
-import study01.tictactoe.component.keypad.TerminalNumericKeypadCellNumberConverter;
+package study01.tictactoe.model;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public final class Launcher {
-    public static void main(String[] args) {
-        final GameFactory gameFactory = new GameFactory(args);
-        final CellNumberConverter cellNumberConverter = new TerminalNumericKeypadCellNumberConverter();
-        Game game = gameFactory.create();
-        game.play();
-    }
+public enum PlayerType {
+
+    USER,
+
+    COMPUTER
 }
