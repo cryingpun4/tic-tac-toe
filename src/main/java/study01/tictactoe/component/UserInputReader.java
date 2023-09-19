@@ -16,22 +16,13 @@
 
 package study01.tictactoe.component;
 
-import study01.tictactoe.model.GameTable;
+import study01.tictactoe.model.Cell;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface DataPrinter {
+public interface UserInputReader {
 
-    void printInfoMessage(String message);
-
-    void printErrorMessage(String message);
-
-    void printMappingTable();
-
-    void printGameTable(GameTable gameTable);
-
+    Cell getUserInput();
 }
-
-
