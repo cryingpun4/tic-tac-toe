@@ -16,22 +16,13 @@
 
 package study01.tictactoe.component;
 
-import study01.tictactoe.model.GameTable;
-
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface DataPrinter {
+public interface GameOverHandler {
 
-    void printInstructions();
-
-    void printInfoMessage(String message);
-
-    void printErrorMessage(String message);
-
-    void printGameTable(GameTable gameTable);
-
+    void gameOver();
 }
 
 

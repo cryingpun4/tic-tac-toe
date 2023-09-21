@@ -14,24 +14,25 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
+package study01.tictactoe.component.console;
 
-import study01.tictactoe.model.GameTable;
+import study01.tictactoe.component.DataPrinter;
+import study01.tictactoe.component.GameOverHandler;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface DataPrinter {
+public class ConsoleGameOverHandler implements GameOverHandler {
 
-    void printInstructions();
+    private final DataPrinter dataPrinter;
 
-    void printInfoMessage(String message);
+    public ConsoleGameOverHandler(final DataPrinter dataPrinter) {
+        this.dataPrinter = dataPrinter;
+    }
 
-    void printErrorMessage(String message);
-
-    void printGameTable(GameTable gameTable);
-
+    @Override
+    public void gameOver() {
+        dataPrinter.printInfoMessage("GAME OVER!");
+    }
 }
-
-
