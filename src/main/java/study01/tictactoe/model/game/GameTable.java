@@ -14,11 +14,11 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.model;
+package study01.tictactoe.model.game;
 
 import java.util.Arrays;
 
-import static study01.tictactoe.model.Sign.EMPTY;
+import static study01.tictactoe.model.game.Sign.EMPTY;
 
 /**
  * @author CryingPun4

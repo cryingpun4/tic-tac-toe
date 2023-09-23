@@ -14,10 +14,10 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component.keypad;
+package study01.tictactoe.component.console.keypad;
 
-import study01.tictactoe.component.CellNumberConverter;
-import study01.tictactoe.model.Cell;
+import study01.tictactoe.component.console.CellNumberConverter;
+import study01.tictactoe.model.game.Cell;
 
 /**
  * @author CryingPun4

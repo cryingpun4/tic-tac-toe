@@ -16,7 +16,7 @@
 
 package study01.tictactoe.component;
 
-import study01.tictactoe.model.Cell;
+import study01.tictactoe.model.game.Cell;
 
 /**
  * @author CryingPun4

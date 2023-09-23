@@ -16,10 +16,10 @@
 
 package study01.tictactoe.component;
 
-import study01.tictactoe.component.keypad.Move;
-import study01.tictactoe.model.Cell;
-import study01.tictactoe.model.GameTable;
-import study01.tictactoe.model.Sign;
+import study01.tictactoe.component.console.keypad.Move;
+import study01.tictactoe.model.game.Cell;
+import study01.tictactoe.model.game.GameTable;
+import study01.tictactoe.model.game.Sign;
 
 import java.util.Random;
 

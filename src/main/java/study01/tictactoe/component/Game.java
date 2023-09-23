@@ -17,8 +17,8 @@
 package study01.tictactoe.component;
 
 
-import study01.tictactoe.model.GameTable;
-import study01.tictactoe.model.Player;
+import study01.tictactoe.model.game.GameTable;
+import study01.tictactoe.model.game.Player;
 
 import java.util.Random;
 

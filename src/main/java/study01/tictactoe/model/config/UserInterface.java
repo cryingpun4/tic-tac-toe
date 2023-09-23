@@ -14,7 +14,7 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.model;
+package study01.tictactoe.model.config;
 
 /**
  * @author CryingPun4

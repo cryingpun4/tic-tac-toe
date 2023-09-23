@@ -14,40 +14,26 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.model;
+package study01.tictactoe.component.console.keypad;
 
-import study01.tictactoe.component.keypad.Move;
+import study01.tictactoe.component.console.CellNumberConverter;
+import study01.tictactoe.model.game.Cell;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class Player {
+public class TerminalNumericKeypadCellNumberConverter implements CellNumberConverter {
 
-    private final Sign sign;
-
-    private final Move move;
-
-    public Player(final Sign sign, final Move move) {
-        this.sign = sign;
-        this.move = move;
-    }
-
-    public Sign getSign() {
-        return sign;
-    }
-
-    public Move getMove() {
-        return move;
-    }
-
-
-    public void makeMove(final GameTable gameTable) {
-        move.make(gameTable, sign);
+    @Override
+    public Cell toCell(final char number) {
+        final int val = number - '0' - 1;
+        return new Cell(val / 3, val % 3);
     }
 
     @Override
-    public String toString() {
-        return "'" + sign + "'";
+    public char toNumber(final Cell cell) {
+        return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
     }
+
 }

@@ -14,15 +14,15 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
+package study01.tictactoe.component.config;
 
-import study01.tictactoe.model.PlayerType;
-import study01.tictactoe.model.UserInterface;
+import study01.tictactoe.model.config.PlayerType;
+import study01.tictactoe.model.config.UserInterface;
 
-import static study01.tictactoe.model.PlayerType.COMPUTER;
-import static study01.tictactoe.model.PlayerType.USER;
-import static study01.tictactoe.model.UserInterface.CONSOLE;
-import static study01.tictactoe.model.UserInterface.GUI;
+import static study01.tictactoe.model.config.PlayerType.COMPUTER;
+import static study01.tictactoe.model.config.PlayerType.USER;
+import static study01.tictactoe.model.config.UserInterface.CONSOLE;
+import static study01.tictactoe.model.config.UserInterface.GUI;
 
 /**
  * @author CryingPun4

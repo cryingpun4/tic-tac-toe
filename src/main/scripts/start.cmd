@@ -1,4 +1,3 @@
 @echo off
 
-java -jar "${project.build.finalName}".jar
-pause
+java -jar ${project.build.finalName}.jar %*

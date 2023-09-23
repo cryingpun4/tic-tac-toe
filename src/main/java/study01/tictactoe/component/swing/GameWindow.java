@@ -19,8 +19,8 @@ package study01.tictactoe.component.swing;
 import study01.tictactoe.component.DataPrinter;
 import study01.tictactoe.component.GameOverHandler;
 import study01.tictactoe.component.UserInputReader;
-import study01.tictactoe.model.Cell;
-import study01.tictactoe.model.GameTable;
+import study01.tictactoe.model.game.Cell;
+import study01.tictactoe.model.game.GameTable;
 
 import javax.swing.*;
 import java.awt.*;

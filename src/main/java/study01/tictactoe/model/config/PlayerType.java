@@ -14,26 +14,15 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component.keypad;
-
-import study01.tictactoe.component.CellNumberConverter;
-import study01.tictactoe.model.Cell;
+package study01.tictactoe.model.config;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class TerminalNumericKeypadCellNumberConverter implements CellNumberConverter {
+public enum PlayerType {
 
-    @Override
-    public Cell toCell(final char number) {
-        final int val = number - '0' - 1;
-        return new Cell(val / 3, val % 3);
-    }
+    USER,
 
-    @Override
-    public char toNumber(final Cell cell) {
-        return (char) ('0' + (cell.getRow() * 3 + cell.getCol() + 1));
-    }
-
+    COMPUTER
 }

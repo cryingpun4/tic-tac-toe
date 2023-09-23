@@ -14,36 +14,40 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.model;
+package study01.tictactoe.model.game;
+
+import study01.tictactoe.component.console.keypad.Move;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class Cell {
+public class Player {
 
-    private final int row;
+    private final Sign sign;
 
-    private final int col;
+    private final Move move;
 
-    public Cell(final int row, final int col) {
-        this.row = row;
-        this.col = col;
+    public Player(final Sign sign, final Move move) {
+        this.sign = sign;
+        this.move = move;
     }
 
-    public int getRow() {
-        return row;
+    public Sign getSign() {
+        return sign;
     }
 
-    public int getCol() {
-        return col;
+    public Move getMove() {
+        return move;
+    }
+
+
+    public void makeMove(final GameTable gameTable) {
+        move.make(gameTable, sign);
     }
 
     @Override
     public String toString() {
-        return "Cell{" +
-                "row=" + row +
-                ", col=" + col +
-                '}';
+        return "'" + sign + "'";
     }
 }

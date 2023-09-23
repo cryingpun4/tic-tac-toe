@@ -14,21 +14,24 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
+package study01.tictactoe;
 
+import study01.tictactoe.component.*;
+import study01.tictactoe.component.config.CommandLineArgumentParser;
+import study01.tictactoe.component.console.CellNumberConverter;
 import study01.tictactoe.component.console.ConsoleDataPrinter;
 import study01.tictactoe.component.console.ConsoleGameOverHandler;
 import study01.tictactoe.component.console.ConsoleUserInputReader;
-import study01.tictactoe.component.keypad.TerminalNumericKeypadCellNumberConverter;
+import study01.tictactoe.component.console.keypad.TerminalNumericKeypadCellNumberConverter;
 import study01.tictactoe.component.swing.GameWindow;
-import study01.tictactoe.model.Player;
-import study01.tictactoe.model.PlayerType;
-import study01.tictactoe.model.UserInterface;
+import study01.tictactoe.model.config.PlayerType;
+import study01.tictactoe.model.config.UserInterface;
+import study01.tictactoe.model.game.Player;
 
-import static study01.tictactoe.model.PlayerType.USER;
-import static study01.tictactoe.model.Sign.O;
-import static study01.tictactoe.model.Sign.X;
-import static study01.tictactoe.model.UserInterface.GUI;
+import static study01.tictactoe.model.config.PlayerType.USER;
+import static study01.tictactoe.model.config.UserInterface.GUI;
+import static study01.tictactoe.model.game.Sign.O;
+import static study01.tictactoe.model.game.Sign.X;
 
 /**
  * @author CryingPun4

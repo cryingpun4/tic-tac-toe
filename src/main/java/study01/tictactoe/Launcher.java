@@ -16,10 +16,9 @@
 
 package study01.tictactoe;
 
-import study01.tictactoe.component.CellNumberConverter;
 import study01.tictactoe.component.Game;
-import study01.tictactoe.component.GameFactory;
-import study01.tictactoe.component.keypad.TerminalNumericKeypadCellNumberConverter;
+import study01.tictactoe.component.console.CellNumberConverter;
+import study01.tictactoe.component.console.keypad.TerminalNumericKeypadCellNumberConverter;
 
 /**
  * @author CryingPun4

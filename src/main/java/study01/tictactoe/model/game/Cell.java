@@ -14,19 +14,36 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component;
-
-import study01.tictactoe.model.Cell;
+package study01.tictactoe.model.game;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface CellNumberConverter {
+public class Cell {
 
+    private final int row;
 
-    Cell toCell(char number);
+    private final int col;
 
-    char toNumber(Cell cell);
+    public Cell(final int row, final int col) {
+        this.row = row;
+        this.col = col;
+    }
 
+    public int getRow() {
+        return row;
+    }
+
+    public int getCol() {
+        return col;
+    }
+
+    @Override
+    public String toString() {
+        return "Cell{" +
+                "row=" + row +
+                ", col=" + col +
+                '}';
+    }
 }

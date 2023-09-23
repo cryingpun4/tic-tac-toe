@@ -17,7 +17,5 @@
 cd "$(dirname "$0")" || exit
 
 # shellcheck disable=SC2154
-java -jar "${project.build.finalName}".jar
-echo "Press enter to continue . . . "
-# shellcheck disable=SC2034
-read -r test
+java -jar "${project.build.finalName}".jar "$@"
+

@@ -16,10 +16,9 @@
 
 package study01.tictactoe.component.console;
 
-import study01.tictactoe.component.CellNumberConverter;
 import study01.tictactoe.component.DataPrinter;
-import study01.tictactoe.model.Cell;
-import study01.tictactoe.model.GameTable;
+import study01.tictactoe.model.game.Cell;
+import study01.tictactoe.model.game.GameTable;
 
 /**
  * @author CryingPun4

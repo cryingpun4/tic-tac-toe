@@ -19,6 +19,8 @@ package study01.tictactoe.component.console;
 import study01.tictactoe.component.DataPrinter;
 import study01.tictactoe.component.GameOverHandler;
 
+import java.util.Scanner;
+
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
@@ -34,5 +36,6 @@ public class ConsoleGameOverHandler implements GameOverHandler {
     @Override
     public void gameOver() {
         dataPrinter.printInfoMessage("GAME OVER!");
+        new Scanner(System.in).nextLine();
     }
 }

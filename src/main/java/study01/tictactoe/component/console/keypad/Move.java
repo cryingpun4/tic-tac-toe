@@ -14,15 +14,15 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.model;
+package study01.tictactoe.component.console.keypad;
+
+import study01.tictactoe.model.game.GameTable;
+import study01.tictactoe.model.game.Sign;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public enum PlayerType {
-
-    USER,
-
-    COMPUTER
+public interface Move {
+    void make(GameTable gameTable, Sign sign);
 }

@@ -14,15 +14,19 @@
  *    limitations under the License.
  */
 
-package study01.tictactoe.component.keypad;
+package study01.tictactoe.component.console;
 
-import study01.tictactoe.model.GameTable;
-import study01.tictactoe.model.Sign;
+import study01.tictactoe.model.game.Cell;
 
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public interface Move {
-    void make(GameTable gameTable, Sign sign);
+public interface CellNumberConverter {
+
+
+    Cell toCell(char number);
+
+    char toNumber(Cell cell);
+
 }
