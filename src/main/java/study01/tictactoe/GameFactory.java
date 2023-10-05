@@ -22,7 +22,7 @@ import study01.tictactoe.component.console.CellNumberConverter;
 import study01.tictactoe.component.console.ConsoleDataPrinter;
 import study01.tictactoe.component.console.ConsoleGameOverHandler;
 import study01.tictactoe.component.console.ConsoleUserInputReader;
-import study01.tictactoe.component.console.keypad.TerminalNumericKeypadCellNumberConverter;
+import study01.tictactoe.component.console.keypad.DesktopNumericKeypadCellNumberConverter;
 import study01.tictactoe.component.swing.GameWindow;
 import study01.tictactoe.model.config.PlayerType;
 import study01.tictactoe.model.config.UserInterface;
@@ -62,7 +62,7 @@ public class GameFactory {
             userInputReader = gameWindow;
             gameOverHandler = gameWindow;
         } else {
-            final CellNumberConverter cellNumberConverter = new TerminalNumericKeypadCellNumberConverter();
+            final CellNumberConverter cellNumberConverter = new DesktopNumericKeypadCellNumberConverter();
             dataPrinter = new ConsoleDataPrinter(cellNumberConverter);
             userInputReader = new ConsoleUserInputReader(cellNumberConverter, dataPrinter);
             gameOverHandler = new ConsoleGameOverHandler(dataPrinter);
