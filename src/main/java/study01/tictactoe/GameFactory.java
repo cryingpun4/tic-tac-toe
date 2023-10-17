@@ -25,6 +25,7 @@ import study01.tictactoe.component.console.ConsoleUserInputReader;
 import study01.tictactoe.component.console.keypad.DesktopNumericKeypadCellNumberConverter;
 import study01.tictactoe.component.strategy.FirstMoveToTheCenterComputerMoveStrategy;
 import study01.tictactoe.component.strategy.RandomComputerMoveStrategy;
+import study01.tictactoe.component.strategy.WinNowComputerMoveStrategy;
 import study01.tictactoe.component.swing.GameWindow;
 import study01.tictactoe.model.config.PlayerType;
 import study01.tictactoe.model.config.UserInterface;
@@ -56,6 +57,7 @@ public class GameFactory {
 
     public Game create() {
         final ComputerMoveStrategy[] strategies = {
+                new WinNowComputerMoveStrategy(),
                 new FirstMoveToTheCenterComputerMoveStrategy(),
                 new RandomComputerMoveStrategy()
         };
