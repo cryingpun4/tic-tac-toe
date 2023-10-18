@@ -27,6 +27,16 @@ public enum Sign {
 
     EMPTY;
 
+    public Sign oppositeSign() {
+        if (this == X) {
+            return O;
+        } else if (this == O) {
+            return X;
+        } else {
+            throw new IllegalStateException("Empty value does not have any opposite one!");
+        }
+    }
+
     @Override
     public String toString() {
         if (this == EMPTY) {
