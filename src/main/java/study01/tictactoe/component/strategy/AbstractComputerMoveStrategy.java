@@ -21,11 +21,19 @@ import study01.tictactoe.model.game.Cell;
 import study01.tictactoe.model.game.GameTable;
 import study01.tictactoe.model.game.Sign;
 
+
 /**
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
 public abstract class AbstractComputerMoveStrategy implements ComputerMoveStrategy {
+
+    private final int expectedCountEmptyCells;
+
+    protected AbstractComputerMoveStrategy(final int expectedCountEmptyCells) {
+        this.expectedCountEmptyCells = expectedCountEmptyCells;
+    }
+
     @Override
     public final boolean tryToMakeMove(final GameTable gameTable, final Sign moveSign) {
         final Sign findSign = getFindSign(moveSign);
@@ -83,7 +91,7 @@ public abstract class AbstractComputerMoveStrategy implements ComputerMoveStrate
             } else {
                 break;
             }
-            if (countEmptyCells == 1 && countSignCells == 2) {
+            if (lastEmptyCell != null && countEmptyCells == expectedCountEmptyCells && countSignCells == 3 - expectedCountEmptyCells) {
                 gameTable.setSign(lastEmptyCell, moveSign);
                 return true;
             }

@@ -22,10 +22,11 @@ import study01.tictactoe.model.game.Sign;
  * @author CryingPun4
  * @link <a href="https://github.com/cryingpun4">...</a>
  */
-public class WinNowComputerMoveStrategy extends AbstractComputerMoveStrategy {
+public class WinOnTheNextStepComputerMoveStrategy extends AbstractComputerMoveStrategy {
 
-    public WinNowComputerMoveStrategy() {
-        super(1);
+
+    public WinOnTheNextStepComputerMoveStrategy() {
+        super(2);
     }
 
     @Override
